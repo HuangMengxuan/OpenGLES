@@ -1,0 +1,17 @@
+
+platform :ios, '9.0'
+
+inhibit_all_warnings!
+
+target 'UnitTestDemo' do
+
+pod 'MBProgressHUD', '~> 1.1.0'
+pod 'AFNetworking', '~> 3.2.1'
+pod 'Masonry'
+
+end
+
+target 'UnitTestDemoTests' do
+pod 'Kiwi', '~> 3.0.0'
+pod 'OCMock'
+end
