@@ -10,15 +10,23 @@
 		5F0AF279783CF93C9EC26D26 /* libPods-UnitTestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A670FAA885E00006C3303912 /* libPods-UnitTestDemo.a */; };
 		8A7605BD11D0EA8CAA88AA3A /* libPods-UnitTestDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E365A400C8FEA88E5170BC2 /* libPods-UnitTestDemoTests.a */; };
 		E36465B022549A5B0035E3CF /* HMXUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E36465AF22549A5B0035E3CF /* HMXUserTests.m */; };
-		E36465B322549BD80035E3CF /* HMXUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E36465B222549BD80035E3CF /* HMXUser.m */; };
 		E36465B52254B4580035E3CF /* HMXCaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E36465B42254B4580035E3CF /* HMXCaseTests.m */; };
 		E36465B72255F4C20035E3CF /* HMXOCMockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E36465B62255F4C20035E3CF /* HMXOCMockTests.m */; };
+		E36465BA225AFA170035E3CF /* HMXModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E36465B9225AFA170035E3CF /* HMXModel.m */; };
+		E36465BC225AFA3D0035E3CF /* HMXModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E36465BB225AFA3D0035E3CF /* HMXModelTests.m */; };
+		E36465C5225C37F30035E3CF /* HMXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E36465C4225C37F30035E3CF /* HMXViewController.m */; };
+		E36465C7225C72720035E3CF /* HMXViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E36465C6225C72720035E3CF /* HMXViewControllerTests.m */; };
+		E36465CA225C82400035E3CF /* NSObject+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = E36465C9225C82400035E3CF /* NSObject+Property.m */; };
+		E36465CD225C8DCF0035E3CF /* HMXTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E36465CC225C8DCF0035E3CF /* HMXTableViewDataSource.m */; };
+		E36465CF225C8E490035E3CF /* HMXTableViewDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E36465CE225C8E490035E3CF /* HMXTableViewDataSourceTests.m */; };
+		E36465D2225CA5630035E3CF /* HMXTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E36465D1225CA5630035E3CF /* HMXTableViewCell.m */; };
+		E36465D5225CCD980035E3CF /* HMXFakeTableViewDataSourceDelegateConfromal.m in Sources */ = {isa = PBXBuildFile; fileRef = E36465D4225CCD980035E3CF /* HMXFakeTableViewDataSourceDelegateConfromal.m */; };
 		E3A1B41822534646009FED3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A1B41722534646009FED3E /* AppDelegate.m */; };
-		E3A1B41B22534646009FED3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A1B41A22534646009FED3E /* ViewController.m */; };
 		E3A1B41E22534646009FED3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A1B41C22534646009FED3E /* Main.storyboard */; };
 		E3A1B42022534647009FED3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A1B41F22534647009FED3E /* Assets.xcassets */; };
 		E3A1B42322534647009FED3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A1B42122534647009FED3E /* LaunchScreen.storyboard */; };
 		E3A1B42622534647009FED3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A1B42522534647009FED3E /* main.m */; };
+		E3E0355A225F3D850066BD43 /* HMXFakeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E03559225F3D850066BD43 /* HMXFakeTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,15 +47,26 @@
 		A670FAA885E00006C3303912 /* libPods-UnitTestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD71CF5CB3F56147F700B58 /* Pods-UnitTestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestDemo.debug.xcconfig"; path = "Target Support Files/Pods-UnitTestDemo/Pods-UnitTestDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E36465AF22549A5B0035E3CF /* HMXUserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMXUserTests.m; sourceTree = "<group>"; };
-		E36465B122549BD80035E3CF /* HMXUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMXUser.h; sourceTree = "<group>"; };
-		E36465B222549BD80035E3CF /* HMXUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMXUser.m; sourceTree = "<group>"; };
 		E36465B42254B4580035E3CF /* HMXCaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMXCaseTests.m; sourceTree = "<group>"; };
 		E36465B62255F4C20035E3CF /* HMXOCMockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMXOCMockTests.m; sourceTree = "<group>"; };
+		E36465B8225AFA170035E3CF /* HMXModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMXModel.h; sourceTree = "<group>"; };
+		E36465B9225AFA170035E3CF /* HMXModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMXModel.m; sourceTree = "<group>"; };
+		E36465BB225AFA3D0035E3CF /* HMXModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMXModelTests.m; sourceTree = "<group>"; };
+		E36465C3225C37F30035E3CF /* HMXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMXViewController.h; sourceTree = "<group>"; };
+		E36465C4225C37F30035E3CF /* HMXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMXViewController.m; sourceTree = "<group>"; };
+		E36465C6225C72720035E3CF /* HMXViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMXViewControllerTests.m; sourceTree = "<group>"; };
+		E36465C8225C82400035E3CF /* NSObject+Property.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Property.h"; sourceTree = "<group>"; };
+		E36465C9225C82400035E3CF /* NSObject+Property.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Property.m"; sourceTree = "<group>"; };
+		E36465CB225C8DCF0035E3CF /* HMXTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMXTableViewDataSource.h; sourceTree = "<group>"; };
+		E36465CC225C8DCF0035E3CF /* HMXTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMXTableViewDataSource.m; sourceTree = "<group>"; };
+		E36465CE225C8E490035E3CF /* HMXTableViewDataSourceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMXTableViewDataSourceTests.m; sourceTree = "<group>"; };
+		E36465D0225CA5630035E3CF /* HMXTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMXTableViewCell.h; sourceTree = "<group>"; };
+		E36465D1225CA5630035E3CF /* HMXTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMXTableViewCell.m; sourceTree = "<group>"; };
+		E36465D3225CCD980035E3CF /* HMXFakeTableViewDataSourceDelegateConfromal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMXFakeTableViewDataSourceDelegateConfromal.h; sourceTree = "<group>"; };
+		E36465D4225CCD980035E3CF /* HMXFakeTableViewDataSourceDelegateConfromal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMXFakeTableViewDataSourceDelegateConfromal.m; sourceTree = "<group>"; };
 		E3A1B41322534646009FED3E /* UnitTestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A1B41622534646009FED3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E3A1B41722534646009FED3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E3A1B41922534646009FED3E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E3A1B41A22534646009FED3E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E3A1B41D22534646009FED3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3A1B41F22534647009FED3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3A1B42222534647009FED3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +74,8 @@
 		E3A1B42522534647009FED3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E3A1B430225353BB009FED3E /* UnitTestDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTestDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A1B434225353BC009FED3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3E03558225F3D840066BD43 /* HMXFakeTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMXFakeTableView.h; sourceTree = "<group>"; };
+		E3E03559225F3D850066BD43 /* HMXFakeTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMXFakeTableView.m; sourceTree = "<group>"; };
 		E3F4B36622535A6000EE6480 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -124,10 +145,14 @@
 			children = (
 				E3A1B41622534646009FED3E /* AppDelegate.h */,
 				E3A1B41722534646009FED3E /* AppDelegate.m */,
-				E36465B122549BD80035E3CF /* HMXUser.h */,
-				E36465B222549BD80035E3CF /* HMXUser.m */,
-				E3A1B41922534646009FED3E /* ViewController.h */,
-				E3A1B41A22534646009FED3E /* ViewController.m */,
+				E36465CB225C8DCF0035E3CF /* HMXTableViewDataSource.h */,
+				E36465CC225C8DCF0035E3CF /* HMXTableViewDataSource.m */,
+				E36465C3225C37F30035E3CF /* HMXViewController.h */,
+				E36465C4225C37F30035E3CF /* HMXViewController.m */,
+				E36465D0225CA5630035E3CF /* HMXTableViewCell.h */,
+				E36465D1225CA5630035E3CF /* HMXTableViewCell.m */,
+				E36465B8225AFA170035E3CF /* HMXModel.h */,
+				E36465B9225AFA170035E3CF /* HMXModel.m */,
 				E3A1B41C22534646009FED3E /* Main.storyboard */,
 				E3A1B41F22534647009FED3E /* Assets.xcassets */,
 				E3A1B42122534647009FED3E /* LaunchScreen.storyboard */,
@@ -144,6 +169,15 @@
 				E36465AF22549A5B0035E3CF /* HMXUserTests.m */,
 				E36465B42254B4580035E3CF /* HMXCaseTests.m */,
 				E36465B62255F4C20035E3CF /* HMXOCMockTests.m */,
+				E36465BB225AFA3D0035E3CF /* HMXModelTests.m */,
+				E36465CE225C8E490035E3CF /* HMXTableViewDataSourceTests.m */,
+				E36465C6225C72720035E3CF /* HMXViewControllerTests.m */,
+				E36465C8225C82400035E3CF /* NSObject+Property.h */,
+				E36465C9225C82400035E3CF /* NSObject+Property.m */,
+				E36465D3225CCD980035E3CF /* HMXFakeTableViewDataSourceDelegateConfromal.h */,
+				E36465D4225CCD980035E3CF /* HMXFakeTableViewDataSourceDelegateConfromal.m */,
+				E3E03558225F3D840066BD43 /* HMXFakeTableView.h */,
+				E3E03559225F3D850066BD43 /* HMXFakeTableView.m */,
 			);
 			path = UnitTestDemoTests;
 			sourceTree = "<group>";
@@ -298,10 +332,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E36465B322549BD80035E3CF /* HMXUser.m in Sources */,
-				E3A1B41B22534646009FED3E /* ViewController.m in Sources */,
+				E36465C5225C37F30035E3CF /* HMXViewController.m in Sources */,
+				E36465CD225C8DCF0035E3CF /* HMXTableViewDataSource.m in Sources */,
 				E3A1B42622534647009FED3E /* main.m in Sources */,
+				E36465D2225CA5630035E3CF /* HMXTableViewCell.m in Sources */,
 				E3A1B41822534646009FED3E /* AppDelegate.m in Sources */,
+				E36465BA225AFA170035E3CF /* HMXModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +348,12 @@
 				E36465B72255F4C20035E3CF /* HMXOCMockTests.m in Sources */,
 				E36465B022549A5B0035E3CF /* HMXUserTests.m in Sources */,
 				E36465B52254B4580035E3CF /* HMXCaseTests.m in Sources */,
+				E36465C7225C72720035E3CF /* HMXViewControllerTests.m in Sources */,
+				E36465CA225C82400035E3CF /* NSObject+Property.m in Sources */,
+				E3E0355A225F3D850066BD43 /* HMXFakeTableView.m in Sources */,
+				E36465BC225AFA3D0035E3CF /* HMXModelTests.m in Sources */,
+				E36465D5225CCD980035E3CF /* HMXFakeTableViewDataSourceDelegateConfromal.m in Sources */,
+				E36465CF225C8E490035E3CF /* HMXTableViewDataSourceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
