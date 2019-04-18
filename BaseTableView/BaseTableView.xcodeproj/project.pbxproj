@@ -15,15 +15,15 @@
 		E3E0357722645A2A0066BD43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E0357622645A2A0066BD43 /* main.m */; };
 		E3E0358122645A2A0066BD43 /* BaseTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E0358022645A2A0066BD43 /* BaseTableViewTests.m */; };
 		E3E0358C22645A2A0066BD43 /* BaseTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E0358B22645A2A0066BD43 /* BaseTableViewUITests.m */; };
-		E3E0359C22645A680066BD43 /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E0359B22645A680066BD43 /* BaseTableView.m */; };
-		E3E0359F22645A760066BD43 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E0359E22645A760066BD43 /* BaseTableViewCell.m */; };
-		E3E035A222645ADF0066BD43 /* BaseTableViewItemSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E035A122645ADF0066BD43 /* BaseTableViewItemSection.m */; };
-		E3E035A522645AEB0066BD43 /* BaseTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E035A422645AEB0066BD43 /* BaseTableViewItem.m */; };
-		E3E035A822645B2B0066BD43 /* BaseTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E035A722645B2B0066BD43 /* BaseTableViewDataSource.m */; };
 		E3E035AA22645D7A0066BD43 /* BaseTableViewDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E035A922645D7A0066BD43 /* BaseTableViewDataSourceTests.m */; };
 		E3E035AC22645D8B0066BD43 /* BaseTableViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E035AB22645D8B0066BD43 /* BaseTableViewCellTests.m */; };
 		E3E035AE22645DA20066BD43 /* BaseTableViewItemSectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E035AD22645DA20066BD43 /* BaseTableViewItemSectionTests.m */; };
 		E3E035B022645DB00066BD43 /* BaseTableViewItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E035AF22645DB00066BD43 /* BaseTableViewItemTests.m */; };
+		E3E035B42268235A0066BD43 /* BaseTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E035B32268235A0066BD43 /* BaseTableViewItem.m */; };
+		E3E035B72268246B0066BD43 /* NSObject+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E035B62268246B0066BD43 /* NSObject+Property.m */; };
+		E3E035BA2268548A0066BD43 /* BaseTableViewItemSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E035B92268548A0066BD43 /* BaseTableViewItemSection.m */; };
+		E3E035BD226857570066BD43 /* BaseTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E035BC226857570066BD43 /* BaseTableViewDataSource.m */; };
+		E3E035C0226870950066BD43 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E035BF226870950066BD43 /* BaseTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,20 +60,20 @@
 		E3E0358722645A2A0066BD43 /* BaseTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E0358B22645A2A0066BD43 /* BaseTableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewUITests.m; sourceTree = "<group>"; };
 		E3E0358D22645A2A0066BD43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3E0359A22645A680066BD43 /* BaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
-		E3E0359B22645A680066BD43 /* BaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
-		E3E0359D22645A760066BD43 /* BaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
-		E3E0359E22645A760066BD43 /* BaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
-		E3E035A022645ADF0066BD43 /* BaseTableViewItemSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewItemSection.h; sourceTree = "<group>"; };
-		E3E035A122645ADF0066BD43 /* BaseTableViewItemSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewItemSection.m; sourceTree = "<group>"; };
-		E3E035A322645AEB0066BD43 /* BaseTableViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewItem.h; sourceTree = "<group>"; };
-		E3E035A422645AEB0066BD43 /* BaseTableViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewItem.m; sourceTree = "<group>"; };
-		E3E035A622645B2B0066BD43 /* BaseTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewDataSource.h; sourceTree = "<group>"; };
-		E3E035A722645B2B0066BD43 /* BaseTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewDataSource.m; sourceTree = "<group>"; };
 		E3E035A922645D7A0066BD43 /* BaseTableViewDataSourceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewDataSourceTests.m; sourceTree = "<group>"; };
 		E3E035AB22645D8B0066BD43 /* BaseTableViewCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCellTests.m; sourceTree = "<group>"; };
 		E3E035AD22645DA20066BD43 /* BaseTableViewItemSectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewItemSectionTests.m; sourceTree = "<group>"; };
 		E3E035AF22645DB00066BD43 /* BaseTableViewItemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewItemTests.m; sourceTree = "<group>"; };
+		E3E035B22268235A0066BD43 /* BaseTableViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewItem.h; sourceTree = "<group>"; };
+		E3E035B32268235A0066BD43 /* BaseTableViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewItem.m; sourceTree = "<group>"; };
+		E3E035B52268246B0066BD43 /* NSObject+Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Property.h"; path = "../../UnitTestDemo/UnitTestDemoTests/NSObject+Property.h"; sourceTree = "<group>"; };
+		E3E035B62268246B0066BD43 /* NSObject+Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Property.m"; path = "../../UnitTestDemo/UnitTestDemoTests/NSObject+Property.m"; sourceTree = "<group>"; };
+		E3E035B82268548A0066BD43 /* BaseTableViewItemSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewItemSection.h; sourceTree = "<group>"; };
+		E3E035B92268548A0066BD43 /* BaseTableViewItemSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewItemSection.m; sourceTree = "<group>"; };
+		E3E035BB226857570066BD43 /* BaseTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewDataSource.h; sourceTree = "<group>"; };
+		E3E035BC226857570066BD43 /* BaseTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewDataSource.m; sourceTree = "<group>"; };
+		E3E035BE226870950066BD43 /* BaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		E3E035BF226870950066BD43 /* BaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +124,7 @@
 		E3E0356622645A280066BD43 /* BaseTableView */ = {
 			isa = PBXGroup;
 			children = (
-				E3E0359922645A380066BD43 /* BaseTableView */,
+				E3E035B1226822940066BD43 /* BasetableView */,
 				E3E0356722645A280066BD43 /* AppDelegate.h */,
 				E3E0356822645A280066BD43 /* AppDelegate.m */,
 				E3E0356A22645A280066BD43 /* ViewController.h */,
@@ -146,6 +146,8 @@
 				E3E035AB22645D8B0066BD43 /* BaseTableViewCellTests.m */,
 				E3E035AD22645DA20066BD43 /* BaseTableViewItemSectionTests.m */,
 				E3E035AF22645DB00066BD43 /* BaseTableViewItemTests.m */,
+				E3E035B52268246B0066BD43 /* NSObject+Property.h */,
+				E3E035B62268246B0066BD43 /* NSObject+Property.m */,
 				E3E0358222645A2A0066BD43 /* Info.plist */,
 			);
 			path = BaseTableViewTests;
@@ -160,21 +162,19 @@
 			path = BaseTableViewUITests;
 			sourceTree = "<group>";
 		};
-		E3E0359922645A380066BD43 /* BaseTableView */ = {
+		E3E035B1226822940066BD43 /* BasetableView */ = {
 			isa = PBXGroup;
 			children = (
-				E3E035A622645B2B0066BD43 /* BaseTableViewDataSource.h */,
-				E3E035A722645B2B0066BD43 /* BaseTableViewDataSource.m */,
-				E3E0359A22645A680066BD43 /* BaseTableView.h */,
-				E3E0359B22645A680066BD43 /* BaseTableView.m */,
-				E3E0359D22645A760066BD43 /* BaseTableViewCell.h */,
-				E3E0359E22645A760066BD43 /* BaseTableViewCell.m */,
-				E3E035A022645ADF0066BD43 /* BaseTableViewItemSection.h */,
-				E3E035A122645ADF0066BD43 /* BaseTableViewItemSection.m */,
-				E3E035A322645AEB0066BD43 /* BaseTableViewItem.h */,
-				E3E035A422645AEB0066BD43 /* BaseTableViewItem.m */,
+				E3E035B22268235A0066BD43 /* BaseTableViewItem.h */,
+				E3E035B32268235A0066BD43 /* BaseTableViewItem.m */,
+				E3E035B82268548A0066BD43 /* BaseTableViewItemSection.h */,
+				E3E035B92268548A0066BD43 /* BaseTableViewItemSection.m */,
+				E3E035BB226857570066BD43 /* BaseTableViewDataSource.h */,
+				E3E035BC226857570066BD43 /* BaseTableViewDataSource.m */,
+				E3E035BE226870950066BD43 /* BaseTableViewCell.h */,
+				E3E035BF226870950066BD43 /* BaseTableViewCell.m */,
 			);
-			path = BaseTableView;
+			path = BasetableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,14 +307,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3E035A522645AEB0066BD43 /* BaseTableViewItem.m in Sources */,
-				E3E0359F22645A760066BD43 /* BaseTableViewCell.m in Sources */,
-				E3E0359C22645A680066BD43 /* BaseTableView.m in Sources */,
 				E3E0356C22645A280066BD43 /* ViewController.m in Sources */,
+				E3E035BA2268548A0066BD43 /* BaseTableViewItemSection.m in Sources */,
 				E3E0357722645A2A0066BD43 /* main.m in Sources */,
-				E3E035A822645B2B0066BD43 /* BaseTableViewDataSource.m in Sources */,
 				E3E0356922645A280066BD43 /* AppDelegate.m in Sources */,
-				E3E035A222645ADF0066BD43 /* BaseTableViewItemSection.m in Sources */,
+				E3E035B42268235A0066BD43 /* BaseTableViewItem.m in Sources */,
+				E3E035C0226870950066BD43 /* BaseTableViewCell.m in Sources */,
+				E3E035BD226857570066BD43 /* BaseTableViewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +325,7 @@
 				E3E0358122645A2A0066BD43 /* BaseTableViewTests.m in Sources */,
 				E3E035AA22645D7A0066BD43 /* BaseTableViewDataSourceTests.m in Sources */,
 				E3E035AE22645DA20066BD43 /* BaseTableViewItemSectionTests.m in Sources */,
+				E3E035B72268246B0066BD43 /* NSObject+Property.m in Sources */,
 				E3E035B022645DB00066BD43 /* BaseTableViewItemTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

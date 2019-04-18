@@ -2,23 +2,17 @@
 //  BaseTableViewItemSection.m
 //  BaseTableView
 //
-//  Created by 不介 on 2019/4/15.
+//  Created by 不介 on 2019/4/18.
 //  Copyright © 2019 不介. All rights reserved.
 //
 
 #import "BaseTableViewItemSection.h"
 
-@interface BaseTableViewItemSection ()
-
-@property (nonatomic, readwrite, strong) NSMutableArray<BaseTableViewItem *> *items;
-
-@end
-
 @implementation BaseTableViewItemSection
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.items = @[].mutableCopy;
+        _items = @[].mutableCopy;
     }
     return self;
 }

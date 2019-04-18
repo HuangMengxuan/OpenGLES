@@ -8,20 +8,27 @@
 
 #import <XCTest/XCTest.h>
 #import "BaseTableViewItemSection.h"
+#import "NSObject+Property.h"
 
 @interface BaseTableViewItemSectionTests : XCTestCase
 
 @end
 
 /**
- 1.1 可以创建BaseTableViewItemSection对象
- 1.2 通过initWithItems:方法可以创建BaseTableViewItemSection对象
- 1.2 通过initWithHeaderTitle:footerTitle:items:方法可以创建BaseTableViewItemSection对象
+ 2.1.1 BaseTableViewItemSection存在成员变量sectionHeaderTitle
+ 2.1.2 BaseTableViewItemSection的成员变量sectionHeaderTitle类型为NSString
+ 2.1.3 BaseTableViewItemSection的成员变量sectionHeaderTitle使用copy
+ 2.1.4 BaseTableViewItemSection存在成员变量sectionFooterTitle
+ 2.1.5 BaseTableViewItemSection的成员变量sectionFooterTitle类型为NSString
+ 2.1.6 BaseTableViewItemSection的成员变量sectionFooterTitle使用copy
+ 2.1.7 BaseTableViewItemSection存在成员变量items
+ 2.1.8 BaseTableViewItemSection的成员变量items类型为NSMutableArray
+ 2.1.9 BaseTableViewItemSection的成员变量items使用readonly
  
- 2.1 可以设置sectionHeaderTitle属性
- 2.2 可以设置sectionFooterTitle属性
+ 2.2.1 通过initWithItems:方法可以创建BaseTableViewItemSection对象，并且新的BaseTableViewItemSection对象的成员变量的值与传入的值一致
+ 2.2.2 通过initWithHeaderTitle:footerTitle:items:方法可以创建BaseTableViewItemSection对象，并且新的BaseTableViewItemSection对象的成员变量的值与传入的值一致
  
- 3.1 创建的BaseTableViewItemSection对象的items不为nil
+ 2.3.1 创建的BaseTableViewItemSection对象的items不为nil
  */
 @implementation BaseTableViewItemSectionTests
 
@@ -33,8 +40,52 @@
     [super tearDown];
 }
 
-- (void)test_BaseTableViewItemSection_Is_Exist {
-    XCTAssertNotNil([BaseTableViewItemSection new], @"可以创建BaseTableViewItemSection对象");
+- (void)test_Exist_Property_sectionHeaderTitle {
+    NSString *propertyName = [NSObject nameForProperty:@"sectionHeaderTitle" objectClass:[BaseTableViewItemSection class]];
+    
+    XCTAssertTrue([propertyName isEqualToString:@"sectionHeaderTitle"], @"BaseTableViewItemSection存在成员变量sectionHeaderTitle");
+}
+
+- (void)test_Property_sectionHeaderTitle_Type_Is_NSString {
+    NSString *propertyType = [NSObject typeForProperty:@"sectionHeaderTitle" objectClass:[BaseTableViewItemSection class]];
+    XCTAssertTrue([propertyType isEqualToString:@"NSString"], @"BaseTableViewItemSection的成员变量sectionHeaderTitle类型为NSString");
+}
+
+- (void)test_Property_sectionHeaderTitle_Exist_Attribute_copy {
+    BOOL isCopy = [NSObject isCopyForProperty:@"sectionHeaderTitle" objectClass:[BaseTableViewItemSection class]];
+    XCTAssertTrue(isCopy, @"BaseTableViewItemSection的成员变量sectionFooterTitle使用copy");
+}
+
+- (void)test_Exist_Property_sectionFooterTitle {
+    NSString *propertyName = [NSObject nameForProperty:@"sectionFooterTitle" objectClass:[BaseTableViewItemSection class]];
+    
+    XCTAssertTrue([propertyName isEqualToString:@"sectionFooterTitle"], @"BaseTableViewItemSection存在成员变量sectionFooterTitle");
+}
+
+- (void)test_Property_sectionFooterTitle_Type_Is_NSString {
+    NSString *propertyType = [NSObject typeForProperty:@"sectionFooterTitle" objectClass:[BaseTableViewItemSection class]];
+    XCTAssertTrue([propertyType isEqualToString:@"NSString"], @"BaseTableViewItemSection的成员变量sectionFooterTitle类型为NSString");
+}
+
+- (void)test_Property_sectionFooterTitle_Exist_Attribute_copy {
+    BOOL isCopy = [NSObject isCopyForProperty:@"sectionFooterTitle" objectClass:[BaseTableViewItemSection class]];
+    XCTAssertTrue(isCopy, @"BaseTableViewItemSection的成员变量sectionFooterTitle使用copy");
+}
+
+- (void)test_Exist_Property_items {
+    NSString *propertyName = [NSObject nameForProperty:@"items" objectClass:[BaseTableViewItemSection class]];
+    
+    XCTAssertTrue([propertyName isEqualToString:@"items"], @"BaseTableViewItemSection存在成员变量items");
+}
+
+- (void)test_Property_items_Type_Is_NSMutableArray {
+    NSString *propertyType = [NSObject typeForProperty:@"items" objectClass:[BaseTableViewItemSection class]];
+    XCTAssertTrue([propertyType isEqualToString:@"NSMutableArray"], @"BaseTableViewItemSection的成员变量items类型为NSMutableArray");
+}
+
+- (void)test_Property_items_Exist_Attribute_Readonly {
+    BOOL isReadonly = [NSObject isReadOnlyForProperty:@"items" objectClass:[BaseTableViewItemSection class]];
+    XCTAssertTrue(isReadonly, @"BaseTableViewItemSection的成员变量items使用readonly");
 }
 
 - (void)test_Method_initWithItems_Valid {
@@ -48,30 +99,12 @@
     NSString *footerTitle = @"footerTitle";
     NSArray *items = @[];
     BaseTableViewItemSection *section = [[BaseTableViewItemSection alloc] initWithHeaderTitle:headerTitle footerTitle:footerTitle items:items];
-    XCTAssertTrue([headerTitle isEqualToString:section.sectionHeaderTitle], @"items属性一致");
-    XCTAssertTrue([footerTitle isEqualToString:section.sectionFooterTitle], @"items属性一致");
+    XCTAssertTrue([headerTitle isEqualToString:section.sectionHeaderTitle], @"sectionHeaderTitle属性一致");
+    XCTAssertTrue([footerTitle isEqualToString:section.sectionFooterTitle], @"sectionFooterTitle属性一致");
     XCTAssertEqualObjects(items, section.items, @"items属性一致");
 }
 
-- (void)test_Set_sectionHeaderTitle_Valid {
-    NSString *headerTitle = @"headerTitle";
-    
-    BaseTableViewItemSection *section = [BaseTableViewItemSection new];
-    section.sectionHeaderTitle = headerTitle;
-    
-    XCTAssertTrue([section.sectionHeaderTitle isEqualToString:headerTitle], @"可以设置sectionHeaderTitle属性");
-}
-
-- (void)test_Set_sectionFooterTitle_Valid {
-    NSString *footerTitle = @"footerTitle";
-    
-    BaseTableViewItemSection *section = [BaseTableViewItemSection new];
-    section.sectionFooterTitle = footerTitle;
-    
-    XCTAssertTrue([section.sectionFooterTitle isEqualToString:footerTitle], @"可以设置sectionFooterTitle属性");
-}
-
-- (void)test_BaseTableViewItemSection_Property_items_Should_Not_Be_Nil {
+- (void)test_Property_items_Should_Not_Be_Nil {
     BaseTableViewItemSection *section1 = [BaseTableViewItemSection new];
     XCTAssertNotNil(section1.items, @"创建的BaseTableViewItemSection对象的items不为nil");
     
