@@ -46,8 +46,26 @@
         cellClass = [BaseTableViewCell class];
     }
     
-    BaseTableViewCell *cell = [[cellClass alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    NSString *className = NSStringFromClass(cellClass);
+    BaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:className];
+    
+    if (!cell) {
+        [tableView registerClass:cellClass forCellReuseIdentifier:className];
+        cell = [tableView dequeueReusableCellWithIdentifier:className];
+    }
+    
+    cell.cellObject = [self cellObjectForIndexPath:indexPath];
+    
     return cell;
+}
+
+#pragma mark - Public Methods
+- (BaseTableViewItem *)cellObjectForIndexPath:(NSIndexPath *)indexPath {
+    if (self.itemSections.count > indexPath.section &&
+        self.itemSections[indexPath.section].items.count > indexPath.row) {
+        return self.itemSections[indexPath.section].items[indexPath.row];
+    }
+    return nil;
 }
 
 @end

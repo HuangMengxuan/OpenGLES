@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) BaseTableViewItem *cellObject;
 
++ (CGFloat)rowHeightForCellObject:(BaseTableViewItem *)cellObject;
+
 @end
 
 NS_ASSUME_NONNULL_END

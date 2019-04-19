@@ -9,6 +9,8 @@
 #import <XCTest/XCTest.h>
 #import "BaseTableViewDataSource.h"
 #import "NSObject+Property.h"
+#import "BaseTableViewDataSourceDelegateConformer.h"
+#import "TestTableViewCell.h"
 
 @interface BaseTableViewDataSourceTests : XCTestCase
 
@@ -213,12 +215,111 @@
                   @"方法tableView:cellForRowAtIndexPath:返回的cell类型是BaseTableViewCell类型或BaseTableViewCell的子类");
 }
 
-- (void)test_Method_tableView_cellForRowAtIndexPath_Returns_Type_Is_BaseTableViewCell_When_cellClassForIndexPath_Returns_Not_Type_BaseTableViewCell {
+- (void)test_Method_tableView_cellForRowAtIndexPath_Returns_BaseTableViewCell_When_cellClassForIndexPath_Returns_Not_Type_BaseTableViewCell {
+    BaseTableViewDataSourceDelegateConformer *conformer = [BaseTableViewDataSourceDelegateConformer new];
+    self.dataSource.delegate = conformer;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    UITableViewCell *cell = [self.dataSource tableView:self.tableView cellForRowAtIndexPath:indexPath];
+    
+    XCTAssertTrue([cell isKindOfClass:[BaseTableViewCell class]],
+                  @"cellClassForIndexPath:返回为NULL时，方法tableView:cellForRowAtIndexPath:返回的cell类型是BaseTableViewCell");
+    
+    conformer.cellClass = [UITableViewCell class];
+    
+    cell = [self.dataSource tableView:self.tableView cellForRowAtIndexPath:indexPath];
+    XCTAssertTrue([cell isKindOfClass:[BaseTableViewCell class]],
+                  @"cellClassForIndexPath:返回为UITableViewCell时，方法tableView:cellForRowAtIndexPath:返回的cell类型是BaseTableViewCell");
+}
+
+- (void)test_Method_tableView_cellForRowAtIndexPath_Returns_BaseTableViewCell_When_cellClassForIndexPath_Returns_Is_Type_BaseTableViewCell {
+    BaseTableViewDataSourceDelegateConformer *conformer = [BaseTableViewDataSourceDelegateConformer new];
+    conformer.cellClass = [BaseTableViewCell class];
+    
+    self.dataSource.delegate = conformer;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    UITableViewCell *cell = [self.dataSource tableView:self.tableView cellForRowAtIndexPath:indexPath];
+    
+    XCTAssertTrue([cell isKindOfClass:[BaseTableViewCell class]],
+                  @"cellClassForIndexPath:返回为BaseTableViewCell时，方法tableView:cellForRowAtIndexPath:返回的cell类型是BaseTableViewCell");
     
 }
 
-- (void)test_Method_tableView_cellForRowAtIndexPath_Returns_Type_Is_BaseTableViewCell_When_cellClassForIndexPath_Returns_Is_Type_BaseTableViewCell {
+- (void)test_Method_tableView_cellForRowAtIndexPath_Returns_TestTableViewCell_When_cellClassForIndexPath_Returns_Is_Type_TestTableViewCell {
+    BaseTableViewDataSourceDelegateConformer *conformer = [BaseTableViewDataSourceDelegateConformer new];
+    conformer.cellClass = [TestTableViewCell class];
     
+    self.dataSource.delegate = conformer;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    UITableViewCell *cell = [self.dataSource tableView:self.tableView cellForRowAtIndexPath:indexPath];
+    
+    XCTAssertTrue([cell isKindOfClass:[TestTableViewCell class]],
+                  @"cellClassForIndexPath:返回为TestTableViewCell时，方法tableView:cellForRowAtIndexPath:返回的cell类型是TestTableViewCell");
+}
+
+#pragma mark - 3.6.*
+- (void)test_Reused_Cell_Is_Nil_Before_tableView_cellForRowAtIndexPath {
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"BaseTableViewCell"];
+    XCTAssertNil(cell, @"在调用方法tableView:cellForRowAtIndexPath:之前，无法获取到可重用cell");
+}
+
+- (void)test_Reused_Cell_Not_Nil_Before_tableView_cellForRowAtIndexPath {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.dataSource tableView:self.tableView cellForRowAtIndexPath:indexPath];
+    
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"BaseTableViewCell"];
+    XCTAssertNotNil(cell, @"在调用方法tableView:cellForRowAtIndexPath:之后，可以获取到与其返回cell类名为可重用标识符的可重用cell");
+}
+
+#pragma mark - 3.7.*
+- (void)test_Exist_Method_cellObjectForIndexPath {
+    XCTAssertTrue([BaseTableViewDataSource instancesRespondToSelector:@selector(cellObjectForIndexPath:)],
+                  @"BaseTableViewDataSource实现方法cellObjectForIndexPath:");
+}
+
+- (void)test_Method_cellObjectForIndexPath_Returns_Nil_When_indexPath_OutOfRange {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    BaseTableViewItem *item = [self.dataSource cellObjectForIndexPath:indexPath];
+    XCTAssertNil(item, @"indexPath超出范围时，cellObjectForIndexPath:返回nil");
+    
+    BaseTableViewItemSection *section = [BaseTableViewItemSection new];
+    [section.items addObjectsFromArray:@[[BaseTableViewItem new], [BaseTableViewItem new]]];
+    self.dataSource.itemSections = @[section].mutableCopy;
+    
+    indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
+    item = [self.dataSource cellObjectForIndexPath:indexPath];
+    XCTAssertNil(item, @"indexPath超出范围时，cellObjectForIndexPath:返回nil");
+    
+    indexPath = [NSIndexPath indexPathForRow:0 inSection:1];
+    item = [self.dataSource cellObjectForIndexPath:indexPath];
+    XCTAssertNil(item, @"indexPath超出范围时，cellObjectForIndexPath:返回nil");
+}
+
+- (void)test_Method_cellObjectForIndexPath_Returns_Equal_Item_In_itemSections {
+    BaseTableViewItemSection *section = [BaseTableViewItemSection new];
+    [section.items addObjectsFromArray:@[[BaseTableViewItem new], [BaseTableViewItem new]]];
+    self.dataSource.itemSections = @[section].mutableCopy;
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    BaseTableViewItem *item = [self.dataSource cellObjectForIndexPath:indexPath];
+    
+    XCTAssertEqual(item, self.dataSource.itemSections[0].items[0],
+                   @"方法cellObjectForIndexPath:返回值与itemSections中对应的BaseTableViewItem一致");
+}
+
+#pragma mark - 3.8.*
+- (void)test_cellObjectForIndexPath_Returns_Equal_tableView_cellForRowAtIndexPath_Cell_cellObject {
+    BaseTableViewItemSection *section = [BaseTableViewItemSection new];
+    [section.items addObjectsFromArray:@[[BaseTableViewItem new], [BaseTableViewItem new]]];
+    self.dataSource.itemSections = @[section].mutableCopy;
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    BaseTableViewItem *item = [self.dataSource cellObjectForIndexPath:indexPath];
+    
+    BaseTableViewCell *cell = (BaseTableViewCell *)[self.dataSource tableView:self.tableView cellForRowAtIndexPath:indexPath];
+    BaseTableViewItem *cellObject = cell.cellObject;
+    
+    XCTAssertEqual(item, cellObject,
+                   @"方法tableView:cellForRowAtIndexPath:返回的cell的cellObject与方法cellObjectForIndexPath:返回的BaseTableViewItem一致");
 }
 
 @end
